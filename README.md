@@ -10,3 +10,11 @@
     - CAP Application 
 2) arbeitsberichtswesen_flask
     - Flask PoC
+
+## Sources
+
+1) Literature
+
+## Figures/Diagramms 
+
+1) Figures
