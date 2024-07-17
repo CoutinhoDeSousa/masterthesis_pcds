@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Datenübersicht</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Daten von meinem Service</h1>
+    <a href="/download-csv">Daten als einfache CSV herunterladen</a>
+    <div class="table-responsive">
+    {% if entries %}
+    <table class="table table-striped">
+        <thead class="thead-light">
+            <tr>
+                {% if entries %}
+                    {% for key in entries[0].keys() %}
+                        <th>{{ key }}</th>
+                    {% endfor %}
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}
+                <tr>
+                    {% for value in entry.values() %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>Keine Daten vorhanden.</p>
+{% endif %}
+</div>
+</body>
+</html>

@@ -1,0 +1,380 @@
+Date: Tue, 16 Jul 2024 16:28:34 +0200 (CEST)
+Message-ID: <1028523938.619.1721140114938@bsconp01.gg.gauselmann.com>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_618_2135097148.1721140114938"
+
+------=_Part_618_2135097148.1721140114938
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Befehle &amp; Links</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Befehle &amp; Links</h1>
+    <div class=3D"Section1">
+        <p><br></p>
+<p><br></p>
+<h1 id=3D"Befehle&amp;Links-Befehle">Befehle</h1>
+<p><span>Erstellen vom korrekten Aufbau f=C3=BCr die Example View in *.cds&=
+nbsp;</span></p>
+<p><span>&nbsp;hana-cli inspectView -v V_EXAMPLE -o cds<br></span></p>
+<p><span>Kompletten Log der Instanz&nbsp;</span></p>
+<p><span>&nbsp;cf dmol -i &lt;instance_id&gt;</span></p>
+<p><span>NPM Hilfen zum sparen von Zeit:<br>
+ "bind-app-router": "cds bind --exec -- npm start&nbsp;--prefix app/router"=
+<br>
+ "hybrid-testing": "cds watch --profile&nbsp;hybrid"<br>
+ "watch-arbeitsberichtswesen_entry": "cds watch --open &nbsp;arbeitsbericht=
+swesen_entry/webapp/index.html?sap-ui-xx-viewCache=3Dfalse",</span></p>
+<p><br></p>
+<p><span>Hinzuf=C3=BCgen der Fiori Preview<br>
+ package json&nbsp;<br>
+ "cds": { "features": { "fiori_preview": true }, }<br><br>
+ Routing (xs-app.json) wird von oben nach unten ausgewertet</span></p>
+<p><br></p>
+<p><span>Generelles Vorgehen:</span></p>
+<p><span>cds build -&gt; deploy -&gt; generate MTA&nbsp;-&gt; deploy mta</s=
+pan></p>
+<p><span>&nbsp;<br>
+ Hana Cloud &amp; BAS gleichzeitig starten seperate Tabs, macht manchmal Au=
+thentifizierungsprobleme, sequenziell funktioniert leider besser</span></p>
+<p><span><br>
+ CalcViews m=C3=BCssen im output voll Capitalized Spaltennamen haben - inte=
+rn ist egal <br>
+ Namen der UI 5 yaml 1:1 in MTA <br>
+ &gt; Application Information <br>
+ Add deploy config</span></p>
+<h1 id=3D"Befehle&amp;Links-Links">Links</h1>
+<p><span>Dev Space BAS:<br><a class=3D"external-link" href=3D"https://help.=
+sap.com/docs/bas/sap-business-application-studio/dev-spaces-in-sap-business=
+-application-studio" rel=3D"nofollow">https://help.sap.com/docs/bas/sap-bus=
+iness-application-studio/dev-spaces-in-sap-business-application-studio</a><=
+br><br>
+ Services:<br><a class=3D"external-link" href=3D"https://help.sap.com/docs/=
+bas/sap-business-application-studio/explore-services-using-service-center" =
+rel=3D"nofollow">https://help.sap.com/docs/bas/sap-business-application-stu=
+dio/explore-services-using-service-center</a><br><br>
+ CAP:<br><a class=3D"external-link" href=3D"https://cap.cloud.sap/docs/" re=
+l=3D"nofollow">https://cap.cloud.sap/docs/</a><br><br>
+ Cloud Foundry<br><a class=3D"external-link" href=3D"https://www.cloudfound=
+ry.org/" rel=3D"nofollow">https://www.cloudfoundry.org/</a> <br><br>
+ Anlage CF Environment:<br><a class=3D"external-link" href=3D"https://devel=
+opers.sap.com/tutorials/btp-ea-onboard-04-subm..html" rel=3D"nofollow">http=
+s://developers.sap.com/tutorials/btp-ea-onboard-04-subm..html</a><br><br>
+ MTA:<br><a class=3D"external-link" href=3D"https://learning.sap.com/learni=
+ng-journeys/develop-advanced-extensions-with-sap-cloud-sdk/working-with-the=
+-mta-yaml-file_a884b953-7212-439d-a5f0-5c3fd122f75f" rel=3D"nofollow">https=
+://learning.sap.com/learning-journeys/develop-advanced-extensions-with-sap-=
+cloud-sdk/working-with-the-mta-yaml-file_a884b953-7212-439d-a5f0-5c3fd122f7=
+5f</a><br><br>
+ MTA BUILD TOOL:<br><a class=3D"external-link" href=3D"https://sap.github.i=
+o/cloud-mta-build-tool/" rel=3D"nofollow">https://sap.github.io/cloud-mta-b=
+uild-tool/</a><br>
+ Yaml Check:<br><a class=3D"external-link" href=3D"https://www.yamllint.com=
+/" rel=3D"nofollow">https://www.yamllint.com/</a> <br><br>
+ cds Views:<br><a class=3D"external-link" href=3D"https://erlebe-software.d=
+e/knowhow/cds-views/" rel=3D"nofollow">https://erlebe-software.de/knowhow/c=
+ds-views/</a><br><br>
+ Datenbank Anlegen:<br><a class=3D"external-link" href=3D"https://help.sap.=
+com/docs/sap-hana-service-for-sap-btp-in-sap-and-microsoft-azure-regions/sa=
+p-hana-service-for-sap-btp-in-sap-regions/creating-databases" rel=3D"nofoll=
+ow">https://help.sap.com/docs/sap-hana-service-for-sap-btp-in-sap-and-micro=
+soft-azure-regions/sap-hana-service-for-sap-btp-in-sap-regions/creating-dat=
+abases</a><br><br>
+ CDS: <br>
+ &nbsp;<a class=3D"external-link" href=3D"https://help.sap.com/docs/btp/sap=
+-business-technology-platform/core-data-and-services-cds-language-reference=
+-documentation" rel=3D"nofollow">https://help.sap.com/docs/btp/sap-business=
+-technology-platform/core-data-and-services-cds-language-reference-document=
+ation</a><br><br>
+ Hybrid Testing:<br><a class=3D"external-link" href=3D"https://cap.cloud.sa=
+p/docs/advanced/hybrid-testing#by-cloud-service-only" rel=3D"nofollow">http=
+s://cap.cloud.sap/docs/advanced/hybrid-testing#by-cloud-service-only</a><br=
+><a class=3D"external-link" href=3D"https://cap.cloud.sap/docs/advanced/hyb=
+rid-testing" rel=3D"nofollow">https://cap.cloud.sap/docs/advanced/hybrid-te=
+sting</a><br><br>
+ odata:<br><a class=3D"external-link" href=3D"https://www.odata.org/documen=
+tation/" rel=3D"nofollow">https://www.odata.org/documentation/</a><br><a cl=
+ass=3D"external-link" href=3D"https://ui5.sap.com/#/topic/5de13cf4dd1f4a348=
+0f7e2eaaee3f5b8" rel=3D"nofollow">https://ui5.sap.com/#/topic/5de13cf4dd1f4=
+a3480f7e2eaaee3f5b8</a><br><br><br>
+ Approuter (npm)<br><a class=3D"external-link" href=3D"https://www.npmjs.co=
+m/package/@sap/approuter" rel=3D"nofollow">https://www.npmjs.com/package/@s=
+ap/approuter</a><br><a class=3D"external-link" href=3D"https://www.npmjs.co=
+m/package/@sap/approuter#xs-appjson-configuration-file" rel=3D"nofollow">ht=
+tps://www.npmjs.com/package/@sap/approuter#xs-appjson-configuration-file</a=
+><br><br>
+ SAPUI5<br><a class=3D"external-link" href=3D"https://developers.sap.com/tu=
+torials/btp-app-create-ui-freestyle-sapui5..html" rel=3D"nofollow">https://=
+developers.sap.com/tutorials/btp-app-create-ui-freestyle-sapui5..html</a><b=
+r><br>
+ XSUAA:<br><a class=3D"external-link" href=3D"https://help.sap.com/docs/btp=
+/sap-business-technology-platform/what-is-sap-authorization-and-trust-manag=
+ement-service" rel=3D"nofollow">https://help.sap.com/docs/btp/sap-business-=
+technology-platform/what-is-sap-authorization-and-trust-management-service<=
+/a> <br><a class=3D"external-link" href=3D"https://cap.cloud.sap/docs/guide=
+s/security/authorization" rel=3D"nofollow">https://cap.cloud.sap/docs/guide=
+s/security/authorization</a><br><a class=3D"external-link" href=3D"https://=
+cap.cloud.sap/docs/node.js/authentication#authentication-enforced-in-produc=
+tion" rel=3D"nofollow">https://cap.cloud.sap/docs/node.js/authentication#au=
+thentication-enforced-in-production</a><br>
+ &nbsp;<a class=3D"external-link" href=3D"https://community.sap.com/t5/tech=
+nology-blogs-by-sap/why-developers-should-care-about-credential-types-for-x=
+suaa/ba-p/13537029" rel=3D"nofollow">https://community.sap.com/t5/technolog=
+y-blogs-by-sap/why-developers-should-care-about-credential-types-for-xsuaa/=
+ba-p/13537029</a><br><a class=3D"external-link" href=3D"https://help.sap.co=
+m/docs/BTP/65de2977205c403bbc107264b8eccf4b/517895a9612241259d6941dbf9ad81c=
+b.html" rel=3D"nofollow">https://help.sap.com/docs/BTP/65de2977205c403bbc10=
+7264b8eccf4b/517895a9612241259d6941dbf9ad81cb.html</a><br><br>
+ Key anlegen<br><a class=3D"external-link" href=3D"https://cli.cloudfoundry=
+.org/de-DE/v6/create-service-key.html" rel=3D"nofollow">https://cli.cloudfo=
+undry.org/de-DE/v6/create-service-key.html</a><br><br>
+ Rollen:<br><a class=3D"external-link" href=3D"https://help.sap.com/docs/bt=
+p/sap-business-technology-platform/configure-application-roles-and-assign-r=
+oles-to-users" rel=3D"nofollow">https://help.sap.com/docs/btp/sap-business-=
+technology-platform/configure-application-roles-and-assign-roles-to-users</=
+a><br><a class=3D"external-link" href=3D"https://help.sap.com/docs/btp/sap-=
+business-technology-platform/mapping-role-collections-in-subaccount" rel=3D=
+"nofollow">https://help.sap.com/docs/btp/sap-business-technology-platform/m=
+apping-role-collections-in-subaccount</a><br><br>
+ Beispiel XS-app<br><a class=3D"external-link" href=3D"https://help.sap.com=
+/docs/SAP_HANA_PLATFORM/4505d0bdaf4948449b7f7379d24d0f0d/6ba89596e3a64a5480=
+c3977d4ea7fdba.html" rel=3D"nofollow">https://help.sap.com/docs/SAP_HANA_PL=
+ATFORM/4505d0bdaf4948449b7f7379d24d0f0d/6ba89596e3a64a5480c3977d4ea7fdba.ht=
+ml</a><br><br>
+ Hana Native Objekte:<br><a class=3D"external-link" href=3D"https://cap.clo=
+ud.sap/docs/advanced/hana#create-sap-hana-native-object" rel=3D"nofollow">h=
+ttps://cap.cloud.sap/docs/advanced/hana#create-sap-hana-native-object</a>)<=
+br><br><br>
+ Stored Procedure:<br><a class=3D"external-link" href=3D"https://developers=
+.sap.com/tutorials/hana-cloud-sqlscript-stored-proc.html" rel=3D"nofollow">=
+https://developers.sap.com/tutorials/hana-cloud-sqlscript-stored-proc.html<=
+/a><br><a class=3D"external-link" href=3D"https://help.sap.com/docs/SAP_PRO=
+FITABILITY_PERFORMANCE_MANAGEMENT/56471df1959f4cfd9e3bf7a6d2d5be42/2804f1fc=
+ee93450b9fa04b0a68e01efd.html" rel=3D"nofollow">https://help.sap.com/docs/S=
+AP_PROFITABILITY_PERFORMANCE_MANAGEMENT/56471df1959f4cfd9e3bf7a6d2d5be42/28=
+04f1fcee93450b9fa04b0a68e01efd.html</a></span></p>
+    </div>
+</body>
+</html>
+------=_Part_618_2135097148.1721140114938--

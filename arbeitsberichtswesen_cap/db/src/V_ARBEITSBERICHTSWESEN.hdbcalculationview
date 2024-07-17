@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="V_ARBEITSBERICHTSWESEN" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true" application="BAS">
+<descriptions defaultDescription="V_ARBEITSBERICHTSWESEN"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="APP_ARBEITSBERICHTSWESEN_ENTRY">
+    <resourceUri>APP_ARBEITSBERICHTSWESEN_ENTRY</resourceUri>
+  </DataSource>
+  <DataSource id="AIS$$$$APP_ARBEITSBERICHTSWESEN_ENTRY$$">
+    <resourceUri>APP_ARBEITSBERICHTSWESEN_ENTRY</resourceUri>
+  </DataSource>
+  <DataSource id="APP_ARBEITSBERICHTSWESEN_SOURCE_TYPE">
+    <resourceUri>APP_ARBEITSBERICHTSWESEN_SOURCE_TYPE</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="SOM" filterExpressionLanguage="SQL">
+    <viewAttributes>
+      <viewAttribute id="AISNUMBER"/>
+      <viewAttribute id="DOCUMENTID"/>
+      <viewAttribute id="COMPANY"/>
+      <viewAttribute id="COMPETENCECENTER"/>
+      <viewAttribute id="PROJECT"/>
+      <viewAttribute id="THEME"/>
+      <viewAttribute id="EDITOR"/>
+      <viewAttribute id="APPROVER"/>
+      <viewAttribute id="STATETEXT"/>
+      <viewAttribute id="STATECODE1"/>
+      <viewAttribute id="STATECODE2"/>
+      <viewAttribute id="REQUESTOR"/>
+      <viewAttribute id="CONCEPTDELIVERYDATE"/>
+      <viewAttribute id="AGREEDDELIVERYDATE"/>
+      <viewAttribute id="COMMENT"/>
+      <viewAttribute id="AMOUNTINEUROBYOFFER"/>
+      <viewAttribute id="SOMSTATECODE"/>
+      <viewAttribute id="SOMSTATETEXT"/>
+      <viewAttribute id="TOTALAMOUNTINEURO"/>
+      <viewAttribute id="AMOUNTINHOURSBYOFFER"/>
+      <viewAttribute id="ACTUALAMOUNTINHOURS"/>
+      <viewAttribute id="OFFERDATE"/>
+      <viewAttribute id="FINISHDATE"/>
+      <viewAttribute id="APPROVALDATE"/>
+      <viewAttribute id="COORDINATOR"/>
+      <viewAttribute id="REQUESTTYPE"/>
+      <viewAttribute id="CUSTOMER"/>
+      <viewAttribute id="CREATIONDATE"/>
+      <viewAttribute id="TEAM"/>
+      <viewAttribute id="FUNCTIONALDEPARTMENT"/>
+      <viewAttribute id="PROJECTID"/>
+      <viewAttribute id="PROJECTTITLE"/>
+      <viewAttribute id="LÄNDER"/>
+      <viewAttribute id="SOURCE_SOURCE"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="APP_ARBEITSBERICHTSWESEN_ENTRY"/>
+    <filter>&quot;SOURCE_SOURCE&quot; = 1
+</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="AIS" filterExpressionLanguage="SQL">
+    <viewAttributes>
+      <viewAttribute id="AISNUMBER"/>
+      <viewAttribute id="DOCUMENTID"/>
+      <viewAttribute id="COMPANY"/>
+      <viewAttribute id="COMPETENCECENTER"/>
+      <viewAttribute id="PROJECT"/>
+      <viewAttribute id="THEME"/>
+      <viewAttribute id="EDITOR"/>
+      <viewAttribute id="APPROVER"/>
+      <viewAttribute id="STATETEXT"/>
+      <viewAttribute id="STATECODE1"/>
+      <viewAttribute id="STATECODE2"/>
+      <viewAttribute id="REQUESTOR"/>
+      <viewAttribute id="CONCEPTDELIVERYDATE"/>
+      <viewAttribute id="AGREEDDELIVERYDATE"/>
+      <viewAttribute id="COMMENT"/>
+      <viewAttribute id="AMOUNTINEUROBYOFFER"/>
+      <viewAttribute id="SOMSTATECODE"/>
+      <viewAttribute id="SOMSTATETEXT"/>
+      <viewAttribute id="TOTALAMOUNTINEURO"/>
+      <viewAttribute id="AMOUNTINHOURSBYOFFER"/>
+      <viewAttribute id="ACTUALAMOUNTINHOURS"/>
+      <viewAttribute id="OFFERDATE"/>
+      <viewAttribute id="FINISHDATE"/>
+      <viewAttribute id="APPROVALDATE"/>
+      <viewAttribute id="COORDINATOR"/>
+      <viewAttribute id="REQUESTTYPE"/>
+      <viewAttribute id="CUSTOMER"/>
+      <viewAttribute id="CREATIONDATE"/>
+      <viewAttribute id="TEAM"/>
+      <viewAttribute id="FUNCTIONALDEPARTMENT"/>
+      <viewAttribute id="PROJECTID"/>
+      <viewAttribute id="PROJECTTITLE"/>
+      <viewAttribute id="LÄNDER"/>
+      <viewAttribute id="SOURCE_SOURCE"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="AIS$$$$APP_ARBEITSBERICHTSWESEN_ENTRY$$"/>
+    <filter>&quot;SOURCE_SOURCE&quot; = 2
+</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="SOURCE">
+    <viewAttributes>
+      <viewAttribute id="SOURCE"/>
+      <viewAttribute id="DESCRIPTION"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="APP_ARBEITSBERICHTSWESEN_SOURCE_TYPE"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="C1_N" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="DOCUMENTID"/>
+      <viewAttribute id="AISNUMBER"/>
+      <viewAttribute id="SOM_SOURCE"/>
+      <viewAttribute id="AIS_SOURCE"/>
+      <viewAttribute id="COMPANY_SOM"/>
+      <viewAttribute id="COMPETENCECENTER_SOM"/>
+      <viewAttribute id="PROJECT_SOM"/>
+      <viewAttribute id="THEME_SOM"/>
+      <viewAttribute id="EDITOR_SOM"/>
+      <viewAttribute id="APPROVER_SOM"/>
+      <viewAttribute id="STATETEXT_SOM"/>
+      <viewAttribute id="STATECODE1_SOM"/>
+      <viewAttribute id="STATECODE2_SOM"/>
+      <viewAttribute id="REQUESTOR_SOM"/>
+      <viewAttribute id="CONCEPTDELIVERYDATE_SOM"/>
+      <viewAttribute id="AGREEDDELIVERYDATE_SOM"/>
+      <viewAttribute id="COMMENT_SOM"/>
+      <viewAttribute id="AMOUNTINEUROBYOFFER_SOM"/>
+      <viewAttribute id="SOMSTATECODE_SOM"/>
+      <viewAttribute id="SOMSTATETEXT_SOM"/>
+      <viewAttribute id="TOTALAMOUNTINEURO_SOM"/>
+      <viewAttribute id="AMOUNTINHOURSBYOFFER_SOM"/>
+      <viewAttribute id="ACTUALAMOUNTINHOURS_SOM"/>
+      <viewAttribute id="OFFERDATE_SOM"/>
+      <viewAttribute id="FINISHDATE_SOM"/>
+      <viewAttribute id="APPROVALDATE_SOM"/>
+      <viewAttribute id="COORDINATOR_SOM"/>
+      <viewAttribute id="REQUESTTYPE_SOM"/>
+      <viewAttribute id="CUSTOMER_SOM"/>
+      <viewAttribute id="CREATIONDATE_SOM"/>
+      <viewAttribute id="TEAM_SOM"/>
+      <viewAttribute id="FUNCTIONALDEPARTMENT_SOM"/>
+      <viewAttribute id="PROJECTID_SOM"/>
+      <viewAttribute id="PROJECTTITLE_SOM"/>
+      <viewAttribute id="COUNTRY_SOM"/>
+      <viewAttribute id="COMPANY_AIS"/>
+      <viewAttribute id="COMPETENCECENTER_AIS"/>
+      <viewAttribute id="PROJECT_AIS"/>
+      <viewAttribute id="THEME_AIS"/>
+      <viewAttribute id="EDITOR_AIS"/>
+      <viewAttribute id="APPROVER_AIS"/>
+      <viewAttribute id="STATETEXT_AIS"/>
+      <viewAttribute id="STATECODE1_AIS"/>
+      <viewAttribute id="STATECODE2_AIS"/>
+      <viewAttribute id="REQUESTOR_AIS"/>
+      <viewAttribute id="CONCEPTDELIVERYDATE_AIS"/>
+      <viewAttribute id="AGREEDDELIVERYDATE_AIS"/>
+      <viewAttribute id="COMMENT_AIS"/>
+      <viewAttribute id="AMOUNTINEUROBYOFFER_AIS"/>
+      <viewAttribute id="SOMSTATECODE_AIS"/>
+      <viewAttribute id="SOMSTATETEXT_AIS"/>
+      <viewAttribute id="TOTALAMOUNTINEURO_AIS"/>
+      <viewAttribute id="AMOUNTINHOURSBYOFFER_AIS"/>
+      <viewAttribute id="ACTUALAMOUNTINHOURS_AIS"/>
+      <viewAttribute id="OFFERDATE_AIS"/>
+      <viewAttribute id="FINISHDATE_AIS"/>
+      <viewAttribute id="APPROVALDATE_AIS"/>
+      <viewAttribute id="COORDINATOR_AIS"/>
+      <viewAttribute id="REQUESTTYPE_AIS"/>
+      <viewAttribute id="CUSTOMER_AIS"/>
+      <viewAttribute id="CREATIONDATE_AIS"/>
+      <viewAttribute id="TEAM_AIS"/>
+      <viewAttribute id="FUNCTIONALDEPARTMENT_AIS"/>
+      <viewAttribute id="PROJECTID_AIS"/>
+      <viewAttribute id="PROJECTTITLE_AIS"/>
+      <viewAttribute id="COUNTRY_AIS"/>
+      <viewAttribute hidden="true" id="JOIN$DOCUMENTID$DOCUMENTID"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="SOURCE" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>COALESCE(AIS_SOURCE,SOM_SOURCE)</formula>
+      </calculatedViewAttribute>
+    
+      <calculatedViewAttribute id="COMPANY" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+    
+        <formula>COALESCE(Company_AIS,Company_SOM)</formula>
+    
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="COMPETENCECENTER" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(CompetenceCenter_AIS, CompetenceCenter_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="PROJECT" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(Project_AIS, Project_SOM)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="THEME" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(Theme_AIS, Theme_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="EDITOR" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(Editor_AIS, Editor_SOM)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="APPROVER" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(Approver_AIS, Approver_SOM)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="STATETEXT" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(StateText_AIS, SomStateText_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="STATECODE" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>COALESCE(CONCAT(StateCode1_AIS, StateCode2_AIS), SomStateCode_SOM)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="REQUESTOR" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(Requestor_AIS, Requestor_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="CONCEPTDELIVERYDATE" datatype="DATE" expressionLanguage="SQL">
+        <formula>COALESCE(ConceptDeliveryDate_AIS, ConceptDeliveryDate_SOM)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="AGREEDDELIVERYDATE" datatype="DATE" expressionLanguage="SQL">
+        <formula>COALESCE(AgreedDeliveryDate_AIS, AgreedDeliveryDate_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="AMOUNTINEUROBYOFFER" datatype="DECIMAL" length="15" scale="2" expressionLanguage="SQL">
+        <formula>COALESCE(AmountInEuroByOffer_AIS, AmountInEuroByOffer_SOM)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="AMOUNTINHOURSBYOFFER" datatype="DECIMAL" length="15" scale="2" expressionLanguage="SQL">
+        <formula>COALESCE(AmountInHoursByOffer_AIS, AmountInHoursByOffer_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="ACTUALAMOUNTINHOURS" datatype="DECIMAL" length="15" scale="2" expressionLanguage="SQL">
+        <formula>COALESCE(ActualAmountInHours_AIS, ActualAmountInHours_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="OFFERDATE" datatype="DATE" expressionLanguage="SQL">
+        <formula>COALESCE(OfferDate_AIS, OfferDate_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="FINISHDATE" datatype="DATE" expressionLanguage="SQL">
+        <formula>COALESCE(FinishDate_AIS, FinishDate_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="APPROVALDATE" datatype="DATE" expressionLanguage="SQL">
+        <formula>COALESCE(ApprovalDate_AIS, ApprovalDate_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="COORDINATOR" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(Coordinator_AIS, Coordinator_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="REQUESTTYPE" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(RequestType_AIS, RequestType_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="CREATIONDATE" datatype="DATE" expressionLanguage="SQL">
+        <formula>COALESCE(CreationDate_AIS, CreationDate_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="TEAM" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(Team_AIS, Team_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="FUNCTIONALDEPARTMENT" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(FunctionalDepartment_AIS, FunctionalDepartment_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="PROJECTID" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(ProjectID_AIS, ProjectID_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="PROJECTTITLE" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(ProjectTitle_AIS, ProjectTitle_SOM)
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="COUNTRY" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>COALESCE(Country_AIS, Country_SOM)</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="SOM">
+      <mapping xsi:type="Calculation:AttributeMapping" target="DOCUMENTID" source="DOCUMENTID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOM_SOURCE" source="SOURCE_SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COMPANY_SOM" source="COMPANY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COMPETENCECENTER_SOM" source="COMPETENCECENTER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROJECT_SOM" source="PROJECT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="THEME_SOM" source="THEME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EDITOR_SOM" source="EDITOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APPROVER_SOM" source="APPROVER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATETEXT_SOM" source="STATETEXT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATECODE1_SOM" source="STATECODE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATECODE2_SOM" source="STATECODE2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REQUESTOR_SOM" source="REQUESTOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CONCEPTDELIVERYDATE_SOM" source="CONCEPTDELIVERYDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGREEDDELIVERYDATE_SOM" source="AGREEDDELIVERYDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COMMENT_SOM" source="COMMENT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AMOUNTINEUROBYOFFER_SOM" source="AMOUNTINEUROBYOFFER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOMSTATECODE_SOM" source="SOMSTATECODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOMSTATETEXT_SOM" source="SOMSTATETEXT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALAMOUNTINEURO_SOM" source="TOTALAMOUNTINEURO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AMOUNTINHOURSBYOFFER_SOM" source="AMOUNTINHOURSBYOFFER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ACTUALAMOUNTINHOURS_SOM" source="ACTUALAMOUNTINHOURS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OFFERDATE_SOM" source="OFFERDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FINISHDATE_SOM" source="FINISHDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APPROVALDATE_SOM" source="APPROVALDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COORDINATOR_SOM" source="COORDINATOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REQUESTTYPE_SOM" source="REQUESTTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CUSTOMER_SOM" source="CUSTOMER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATIONDATE_SOM" source="CREATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TEAM_SOM" source="TEAM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FUNCTIONALDEPARTMENT_SOM" source="FUNCTIONALDEPARTMENT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROJECTID_SOM" source="PROJECTID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROJECTTITLE_SOM" source="PROJECTTITLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY_SOM" source="LÄNDER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$DOCUMENTID$DOCUMENTID" source="DOCUMENTID"/>
+    </input>
+    <input node="AIS">
+      <mapping xsi:type="Calculation:AttributeMapping" target="AISNUMBER" source="AISNUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AIS_SOURCE" source="SOURCE_SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COMPANY_AIS" source="COMPANY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COMPETENCECENTER_AIS" source="COMPETENCECENTER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROJECT_AIS" source="PROJECT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="THEME_AIS" source="THEME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EDITOR_AIS" source="EDITOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APPROVER_AIS" source="APPROVER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATETEXT_AIS" source="STATETEXT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATECODE1_AIS" source="STATECODE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATECODE2_AIS" source="STATECODE2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REQUESTOR_AIS" source="REQUESTOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CONCEPTDELIVERYDATE_AIS" source="CONCEPTDELIVERYDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGREEDDELIVERYDATE_AIS" source="AGREEDDELIVERYDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COMMENT_AIS" source="COMMENT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AMOUNTINEUROBYOFFER_AIS" source="AMOUNTINEUROBYOFFER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOMSTATECODE_AIS" source="SOMSTATECODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOMSTATETEXT_AIS" source="SOMSTATETEXT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALAMOUNTINEURO_AIS" source="TOTALAMOUNTINEURO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AMOUNTINHOURSBYOFFER_AIS" source="AMOUNTINHOURSBYOFFER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ACTUALAMOUNTINHOURS_AIS" source="ACTUALAMOUNTINHOURS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OFFERDATE_AIS" source="OFFERDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FINISHDATE_AIS" source="FINISHDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APPROVALDATE_AIS" source="APPROVALDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COORDINATOR_AIS" source="COORDINATOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REQUESTTYPE_AIS" source="REQUESTTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CUSTOMER_AIS" source="CUSTOMER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATIONDATE_AIS" source="CREATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TEAM_AIS" source="TEAM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FUNCTIONALDEPARTMENT_AIS" source="FUNCTIONALDEPARTMENT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROJECTID_AIS" source="PROJECTID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROJECTTITLE_AIS" source="PROJECTTITLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY_AIS" source="LÄNDER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$DOCUMENTID$DOCUMENTID" source="DOCUMENTID"/>
+    </input>
+    <joinAttribute name="JOIN$DOCUMENTID$DOCUMENTID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" cardinality="CN_N" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="DOCUMENTID"/>
+      <viewAttribute id="AISNUMBER"/>
+      <viewAttribute id="COMMENT_SOM"/>
+      <viewAttribute id="COMMENT_AIS"/>
+      <viewAttribute id="COMPANY"/>
+      <viewAttribute id="COMPETENCECENTER"/>
+      <viewAttribute id="PROJECT"/>
+      <viewAttribute id="THEME"/>
+      <viewAttribute id="EDITOR"/>
+      <viewAttribute id="APPROVER"/>
+      <viewAttribute id="STATETEXT"/>
+      <viewAttribute id="STATECODE"/>
+      <viewAttribute id="REQUESTOR"/>
+      <viewAttribute id="CONCEPTDELIVERYDATE"/>
+      <viewAttribute id="AGREEDDELIVERYDATE"/>
+      <viewAttribute id="AMOUNTINEUROBYOFFER"/>
+      <viewAttribute id="AMOUNTINHOURSBYOFFER"/>
+      <viewAttribute id="ACTUALAMOUNTINHOURS"/>
+      <viewAttribute id="OFFERDATE"/>
+      <viewAttribute id="FINISHDATE"/>
+      <viewAttribute id="APPROVALDATE"/>
+      <viewAttribute id="COORDINATOR"/>
+      <viewAttribute id="REQUESTTYPE"/>
+      <viewAttribute id="CREATIONDATE"/>
+      <viewAttribute id="TEAM"/>
+      <viewAttribute id="FUNCTIONALDEPARTMENT"/>
+      <viewAttribute id="PROJECTID"/>
+      <viewAttribute id="PROJECTTITLE"/>
+      <viewAttribute id="COUNTRY"/>
+      <viewAttribute id="SOURCE"/>
+      <viewAttribute hidden="true" id="JOIN$SOURCE$SOURCE"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Join_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="DOCUMENTID" source="DOCUMENTID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AISNUMBER" source="AISNUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COMMENT_SOM" source="COMMENT_SOM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COMMENT_AIS" source="COMMENT_AIS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COMPANY" source="COMPANY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COMPETENCECENTER" source="COMPETENCECENTER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROJECT" source="PROJECT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="THEME" source="THEME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EDITOR" source="EDITOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APPROVER" source="APPROVER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATETEXT" source="STATETEXT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATECODE" source="STATECODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REQUESTOR" source="REQUESTOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CONCEPTDELIVERYDATE" source="CONCEPTDELIVERYDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGREEDDELIVERYDATE" source="AGREEDDELIVERYDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AMOUNTINEUROBYOFFER" source="AMOUNTINEUROBYOFFER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AMOUNTINHOURSBYOFFER" source="AMOUNTINHOURSBYOFFER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ACTUALAMOUNTINHOURS" source="ACTUALAMOUNTINHOURS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OFFERDATE" source="OFFERDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FINISHDATE" source="FINISHDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APPROVALDATE" source="APPROVALDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COORDINATOR" source="COORDINATOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REQUESTTYPE" source="REQUESTTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATIONDATE" source="CREATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TEAM" source="TEAM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FUNCTIONALDEPARTMENT" source="FUNCTIONALDEPARTMENT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROJECTID" source="PROJECTID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROJECTTITLE" source="PROJECTTITLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY" source="COUNTRY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$SOURCE$SOURCE" source="SOURCE"/>
+    </input>
+    <input node="SOURCE">
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="DESCRIPTION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$SOURCE$SOURCE" source="SOURCE"/>
+    </input>
+    <joinAttribute name="JOIN$SOURCE$SOURCE"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Join_2">
+  <attributes>
+    <attribute id="DOCUMENTID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DOCUMENTID"/>
+      <keyMapping columnObjectName="Join_2" columnName="DOCUMENTID"/>
+    </attribute>
+    <attribute id="AISNUMBER" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AISNUMBER"/>
+      <keyMapping columnObjectName="Join_2" columnName="AISNUMBER"/>
+    </attribute>
+    <attribute id="COMMENT_SOM" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COMMENT"/>
+      <keyMapping columnObjectName="Join_2" columnName="COMMENT_SOM"/>
+    </attribute>
+    <attribute id="COMMENT_AIS" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COMMENT_AIS"/>
+      <keyMapping columnObjectName="Join_2" columnName="COMMENT_AIS"/>
+    </attribute>
+    <attribute id="COMPANY" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COMPANY"/>
+      <keyMapping columnObjectName="Join_2" columnName="COMPANY"/>
+    </attribute>
+    <attribute id="COMPETENCECENTER" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COMPETENCECENTER"/>
+      <keyMapping columnObjectName="Join_2" columnName="COMPETENCECENTER"/>
+    </attribute>
+    <attribute id="PROJECT" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PROJECT"/>
+      <keyMapping columnObjectName="Join_2" columnName="PROJECT"/>
+    </attribute>
+    <attribute id="THEME" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="THEME"/>
+      <keyMapping columnObjectName="Join_2" columnName="THEME"/>
+    </attribute>
+    <attribute id="EDITOR" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EDITOR"/>
+      <keyMapping columnObjectName="Join_2" columnName="EDITOR"/>
+    </attribute>
+    <attribute id="APPROVER" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="APPROVER"/>
+      <keyMapping columnObjectName="Join_2" columnName="APPROVER"/>
+    </attribute>
+    <attribute id="STATETEXT" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATETEXT"/>
+      <keyMapping columnObjectName="Join_2" columnName="STATETEXT"/>
+    </attribute>
+    <attribute id="STATECODE" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATECODE"/>
+      <keyMapping columnObjectName="Join_2" columnName="STATECODE"/>
+    </attribute>
+    <attribute id="REQUESTOR" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REQUESTOR"/>
+      <keyMapping columnObjectName="Join_2" columnName="REQUESTOR"/>
+    </attribute>
+    <attribute id="CONCEPTDELIVERYDATE" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CONCEPTDELIVERYDATE"/>
+      <keyMapping columnObjectName="Join_2" columnName="CONCEPTDELIVERYDATE"/>
+    </attribute>
+    <attribute id="AGREEDDELIVERYDATE" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGREEDDELIVERYDATE"/>
+      <keyMapping columnObjectName="Join_2" columnName="AGREEDDELIVERYDATE"/>
+    </attribute>
+    <attribute id="AMOUNTINEUROBYOFFER" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AMOUNTINEUROBYOFFER"/>
+      <keyMapping columnObjectName="Join_2" columnName="AMOUNTINEUROBYOFFER"/>
+    </attribute>
+    <attribute id="AMOUNTINHOURSBYOFFER" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AMOUNTINHOURSBYOFFER"/>
+      <keyMapping columnObjectName="Join_2" columnName="AMOUNTINHOURSBYOFFER"/>
+    </attribute>
+    <attribute id="ACTUALAMOUNTINHOURS" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ACTUALAMOUNTINHOURS"/>
+      <keyMapping columnObjectName="Join_2" columnName="ACTUALAMOUNTINHOURS"/>
+    </attribute>
+    <attribute id="OFFERDATE" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OFFERDATE"/>
+      <keyMapping columnObjectName="Join_2" columnName="OFFERDATE"/>
+    </attribute>
+    <attribute id="FINISHDATE" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FINISHDATE"/>
+      <keyMapping columnObjectName="Join_2" columnName="FINISHDATE"/>
+    </attribute>
+    <attribute id="APPROVALDATE" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="APPROVALDATE"/>
+      <keyMapping columnObjectName="Join_2" columnName="APPROVALDATE"/>
+    </attribute>
+    <attribute id="COORDINATOR" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COORDINATOR"/>
+      <keyMapping columnObjectName="Join_2" columnName="COORDINATOR"/>
+    </attribute>
+    <attribute id="REQUESTTYPE" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REQUESTTYPE"/>
+      <keyMapping columnObjectName="Join_2" columnName="REQUESTTYPE"/>
+    </attribute>
+    <attribute id="CREATIONDATE" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATIONDATE"/>
+      <keyMapping columnObjectName="Join_2" columnName="CREATIONDATE"/>
+    </attribute>
+    <attribute id="TEAM" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TEAM"/>
+      <keyMapping columnObjectName="Join_2" columnName="TEAM"/>
+    </attribute>
+    <attribute id="FUNCTIONALDEPARTMENT" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FUNCTIONALDEPARTMENT"/>
+      <keyMapping columnObjectName="Join_2" columnName="FUNCTIONALDEPARTMENT"/>
+    </attribute>
+    <attribute id="PROJECTID" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PROJECTID"/>
+      <keyMapping columnObjectName="Join_2" columnName="PROJECTID"/>
+    </attribute>
+    <attribute id="PROJECTTITLE" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PROJECTTITLE"/>
+      <keyMapping columnObjectName="Join_2" columnName="PROJECTTITLE"/>
+    </attribute>
+    <attribute id="COUNTRY" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRY"/>
+      <keyMapping columnObjectName="Join_2" columnName="COUNTRY"/>
+    </attribute>
+    <attribute id="SOURCE" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DESCRIPTION"/>
+      <keyMapping columnObjectName="Join_2" columnName="SOURCE"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="100" y="105"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="SOM" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="-85" y="454"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="AIS" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="187" y="454"/>
+      <rectangleSize height="30" width="160"/>
+    </shape><shape><upperLeftCorner/><rectangleSize/></shape>
+    <shape expanded="true" modelObjectName="SOURCE" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="260" y="319"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="50" y="319"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="SOM" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="AIS" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="59" y="193"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape modelObjectName="Join_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="SOURCE" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape></shapes>
+</layout>
+</Calculation:scenario>

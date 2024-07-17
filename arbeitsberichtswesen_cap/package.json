@@ -1,0 +1,51 @@
+{
+  "name": "Arbeitsberichtswesen",
+  "version": "1.0.0",
+  "description": "Arbeitsberichtswesen",
+  "repository": "https://github.com/CoutinhoDeSousa/arbeitsberichtswesen/tree/main",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7",
+    "@sap/eslint-plugin-cds": "^3",
+    "@sap/ux-specification": "^1.120.11",
+    "eslint": "^9",
+    "rimraf": "^5.0.5"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "start:mock": "NODE_ENV=mock cds-serve",
+    "start:prod": "NODE_ENV=production cds-serve",
+    "watch-arbeitsberichtswesen_entry": "cds watch --open arbeitsberichtswesen_entry/webapp/index.html?sap-ui-xx-viewCache=false",
+    "hybrid-testing": "cds watch --profile hybrid",
+    "bind-app-router": "cds bind --exec -- npm start --prefix app/router",
+    "undeploy": "cf undeploy Arbeitsberichtswesen --delete-services --delete-service-keys --delete-service-brokers",
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+  },
+  "cds": {
+    "requires": {
+      "auth": "xsuaa",
+      "db": {
+        "kind": "hana",
+        "model": "gen/db",
+        "credentials": {
+          "profile": "mock"
+        }
+      }
+    },
+    "features": {
+      "fiori_preview": true
+    }
+  },
+  "sapux": [
+    "app/arbeitsberichtswesen_entry"
+  ]
+}

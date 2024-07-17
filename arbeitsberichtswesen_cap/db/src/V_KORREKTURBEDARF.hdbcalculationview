@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="V_KORREKTURBEDARF" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true" application="BAS">
+<descriptions defaultDescription="V_KORREKTURBEDARF"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="V_ARBEITSBERICHTSWESEN">
+    <resourceUri>V_ARBEITSBERICHTSWESEN</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Problemerkennung" filterExpressionLanguage="SQL">
+    <viewAttributes>
+      <viewAttribute id="DOCUMENTID"/>
+      <viewAttribute id="AISNUMBER"/>
+      <viewAttribute id="COMMENT_SOM"/>
+      <viewAttribute id="COMMENT_AIS"/>
+      <viewAttribute id="STATETEXT"/>
+      <viewAttribute id="STATECODE"/>
+      <viewAttribute id="AGREEDDELIVERYDATE"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="today" datatype="DATE" expressionLanguage="SQL">
+        <formula>CURRENT_DATE</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="TRESHHOLD_DATE" datatype="DATE" expressionLanguage="SQL">
+        <formula>ADD_DAYS(LAST_DAY(CURRENT_DATE),14)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="ISSUE" datatype="NVARCHAR" length="13" expressionLanguage="SQL">
+        <formula>CASE 
+    WHEN &quot;AISNUMBER&quot; IS NULL AND (&quot;COMMENT_SOM&quot; IS NULL OR &quot;COMMENT_SOM&quot; = '') THEN 'Kommentar fehlt (SOM)'
+    WHEN &quot;AISNUMBER&quot; IS NOT NULL AND (&quot;COMMENT_AIS&quot; IS NULL OR &quot;COMMENT_AIS&quot; = '') THEN 'Kommentar fehlt (AIS)t'
+    WHEN &quot;AGREEDDELIVERYDATE&quot; &lt; CURRENT_DATE THEN 'Überschrittene Lieferzeit'
+    WHEN &quot;AGREEDDELIVERYDATE&quot; &lt; &quot;TRESHHOLD_DATE&quot; THEN 'Lieferzeit im akuten Fenster '
+    ELSE 'Keine Probleme'
+END</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="V_ARBEITSBERICHTSWESEN"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Problemerkennung" filterExpressionLanguage="SQL">
+  <attributes>
+    <attribute id="DOCUMENTID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DOCUMENTID"/>
+      <keyMapping columnObjectName="Problemerkennung" columnName="DOCUMENTID"/>
+    </attribute>
+    <attribute id="AISNUMBER" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AISNUMBER"/>
+      <keyMapping columnObjectName="Problemerkennung" columnName="AISNUMBER"/>
+    </attribute>
+    <attribute id="STATETEXT" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATETEXT"/>
+      <keyMapping columnObjectName="Problemerkennung" columnName="STATETEXT"/>
+    </attribute>
+    <attribute id="STATECODE" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATECODE"/>
+      <keyMapping columnObjectName="Problemerkennung" columnName="STATECODE"/>
+    </attribute>
+    <attribute id="ISSUE" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ISSUE"/>
+      <keyMapping columnObjectName="Problemerkennung" columnName="ISSUE"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="Problemerkennung" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

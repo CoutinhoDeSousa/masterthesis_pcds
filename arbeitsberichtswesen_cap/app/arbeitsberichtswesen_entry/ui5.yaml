@@ -1,0 +1,17 @@
+specVersion: "2.5"
+metadata:
+  name: Arbeitsberichtswesen-Worklist
+type: application
+#ui5Theme: sap_fiori_3 ### 
+server:
+  customMiddleware:
+  - name: fiori-tools-proxy
+    afterMiddleware: compression
+  - name: fiori-tools-appreload
+    afterMiddleware: compression
+  - name: fiori-tools-preview
+    afterMiddleware: compression
+resources:
+  configuration:
+    paths:
+      webapp: webapp

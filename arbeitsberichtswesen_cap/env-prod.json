@@ -1,0 +1,25 @@
+{
+    "VCAP_SERVICES": {
+      "hana": [
+        {
+          "name": "prod-hana",
+          "label": "hana",
+          "plan": "hdi-shared",
+          "credentials": {
+            "url": "jdbc:sap://3e1bf7f9-1ab0-4d30-b537-48ed3681132e.hana.prod-eu20.hanacloud.ondemand.com:443?encrypt=true&validateCertificate=true&currentschema=2634F71A86A94C2EBC1E020E5635F3E8",
+            "certificate": "-----BEGIN CERTIFICATE-----\nMIIDrzCCApegAwIBAgIQCDvgVpBCRrGhdWrJWZHHSjANBgkqhkiG9w0BAQUFADBh\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBD\nQTAeFw0wNjExMTAwMDAwMDBaFw0zMTExMTAwMDAwMDBaMGExCzAJBgNVBAYTAlVT\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IENBMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jvhEXLeqKTTo1eqUKKPC3eQyaKl7hLOllsB\nCSDMAZOnTjC3U/dDxGkAV53ijSLdhwZAAIEJzs4bg7/fzTtxRuLWZscFs3YnFo97\nnh6Vfe63SKMI2tavegw5BmV/Sl0fvBf4q77uKNd0f3p4mVmFaG5cIzJLv07A6Fpt\n43C/dxC//AH2hdmoRBBYMql1GNXRor5H4idq9Joz+EkIYIvUX7Q6hL+hqkpMfT7P\nT19sdl6gSzeRntwi5m3OFBqOasv+zbMUZBfHWymeMr/y7vrTC0LUq7dBMtoM1O/4\ngdW7jVg/tRvoSSiicNoxBN33shbyTApOB6jtSj1etX+jkMOvJwIDAQABo2MwYTAO\nBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUA95QNVbR\nTLtm8KPiGxvDl7I90VUwHwYDVR0jBBgwFoAUA95QNVbRTLtm8KPiGxvDl7I90VUw\nDQYJKoZIhvcNAQEFBQADggEBAMucN6pIExIK+t1EnE9SsPTfrgT1eXkIoyQY/Esr\nhMAtudXH/vTBH1jLuG2cenTnmCmrEbXjcKChzUyImZOMkXDiqw8cvpOp/2PV5Adg\n06O/nVsJ8dWO41P0jmP6P6fbtGbfYmbW0W5BjfIttep3Sp+dWOIrWcBAI+0tKIJF\nPnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886UAb3LujEV0ls\nYSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk\nCAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=\n-----END CERTIFICATE-----",
+            "database_id": "3e1bf7f9-1ab0-4d30-b537-48ed3681132e",
+            "driver": "com.sap.db.jdbc.Driver",
+            "hdi_password": "Ub0qI4l_-33W-sUS5VV2BxwDn3zA3FTa3vmGq6DmWTLSHrd-HLYpDy1ort8vzB6Cq.M7IV4J7y0iTA1bqkPPXQcLmna6uCysb4Oc6R_Xki77-Eff59iNo1WFo.JJfASX",
+            "hdi_user": "2634F71A86A94C2EBC1E020E5635F3E8_2OP80P2Z8TKV4RYW86YJSDM8F_DT",
+            "host": "3e1bf7f9-1ab0-4d30-b537-48ed3681132e.hana.prod-eu20.hanacloud.ondemand.com",
+            "password": "Mq4ppChbAuEEev9q8czdmc7u5OuqgZ_qO7DK3SeIoZVhZPmSc_kQz7X9zeYucxQNihL5BeuCyzNsx_GfFiYWNi950_6KsgJeZizbb.l1AEi-6..ndX8Nesa1cKUUU3YI",
+            "port": "443",
+            "schema": "2634F71A86A94C2EBC1E020E5635F3E8",
+            "user": "2634F71A86A94C2EBC1E020E5635F3E8_2OP80P2Z8TKV4RYW86YJSDM8F_RT"
+          }
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,103 @@
+_schema-version: "3.1"
+ID: Arbeitsberichtswesen
+version: 1.0.1
+description: "A simple CAP project."
+parameters:
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm ci
+        - npx cds build --production
+modules:
+  - name: Arbeitsberichtswesen-srv
+    type: nodejs
+    path: gen/srv
+    parameters:
+      buildpack: nodejs_buildpack
+      readiness-health-check-type: http
+      readiness-health-check-http-endpoint: /health
+    build-parameters:
+      builder: npm
+    provides:
+      - name: srv-api # required by consumers of CAP services (e.g. approuter)
+        properties:
+          srv-url: ${default-url}
+    requires:
+      - name: Arbeitsberichtswesen-auth
+      - name: Arbeitsberichtswesen-db
+
+  - name: Arbeitsberichtswesen-db-deployer
+    type: hdb
+    path: gen/db
+    parameters:
+      buildpack: nodejs_buildpack
+    requires:
+      - name: Arbeitsberichtswesen-db
+
+  - name: Arbeitsberichtswesen
+    type: approuter.nodejs
+    path: app/router
+    parameters:
+      keep-existing-routes: true
+      disk-quota: 256M
+      memory: 256M
+    build-parameters:
+      ignore: ["default-env.json", ".env"]
+    requires:
+      - name: srv-api
+        group: destinations
+        properties:
+          name: srv-api # must be used in xs-app.json as well
+          url: ~{srv-url}
+          forwardAuthToken: true
+      - name: Arbeitsberichtswesen-auth
+      - name: Arbeitsberichtswesen-destination ## Hinzugefügt zum testen, im Zweifel herausnehmen
+      
+  - name: Arbeitsberichtswesen-webapp
+    type: html5 #application erwartet startscript
+    path: ./app/arbeitsberichtswesen_entry
+    parameters:
+      keep-existing-routes: true
+      disk-quota: 256M
+      memory: 256M
+    build-parameters:
+      builder: custom
+      commands:
+        - npm install
+        - npm run build:cf
+      build-result: dist
+      supported-platforms: []
+    requires:
+      - name: srv-api
+        group: destinations
+        properties:
+          name: srv-api # must be used in xs-app.json as well
+          url: ~{srv-url}
+          forwardAuthToken: true
+      - name: Arbeitsberichtswesen-auth
+
+resources:
+  - name: Arbeitsberichtswesen-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+      config:
+        xsappname: arbeitsberichtswesen
+        tenant-mode: dedicated
+
+  - name: Arbeitsberichtswesen-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared
+
+  - name: Arbeitsberichtswesen-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service-plan: lite 
+      service: destination
+
